@@ -1,0 +1,57 @@
+{
+  "name": "form-generator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An application using LitElement that allows for the generation, validation, and management of the visibility of fields, consisting of multiple form pages based on JSON provided by the backend application.",
+  "main": "src/components/formGeneratorSubapp.js",
+  "module": "src/components/formGeneratorSubapp.js",
+  "type": "module",
+  "scripts": {
+    "watch": "wds --watch",
+    "test": "jest",
+    "server": "nodemon ./server/index.mjs"
+  },
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "javascript",
+    "lit"
+  ],
+  "author": "Michał Rzepecki",
+  "dependencies": {
+    "@lion/ui": "^0.5.1",
+    "@open-wc/scoped-elements": "^3.0.3",
+    "@webcomponents/scoped-custom-element-registry": "^0.0.9",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "lit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@babel/core": "^7.23.6",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.23.6",
+    "@custom-elements-manifest/analyzer": "^0.6.3",
+    "@open-wc/testing": "^3.1.5",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@web/dev-server": "^0.1.31",
+    "@web/dev-server-legacy": "^1.0.0",
+    "@web/test-runner": "^0.15.0",
+    "@web/test-runner-playwright": "^0.9.0",
+    "@webcomponents/webcomponentsjs": "^2.8.0",
+    "babel-jest": "^29.7.0",
+    "body-parser": "^1.20.2",
+    "es-dev-server": "^2.1.0",
+    "eslint": "^8.15.0",
+    "jest": "^29.7.0",
+    "lit-analyzer": "^1.2.1",
+    "nodemon": "^3.0.2",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.73.0",
+    "rollup-plugin-summary": "^1.4.3",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

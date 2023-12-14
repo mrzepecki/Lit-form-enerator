@@ -1,0 +1,77 @@
+[
+  {
+    "name": "customer",
+    "order": 1,
+    "form": {
+      "name": {
+        "type": "text",
+        "validators": ["required","max-len:20","min-len:3"],
+        "visibility": "always"
+      },
+      "surname": {
+        "type": "text",
+        "validators": ["required","max-len:20","min-len:3"],
+        "visibility": "always"
+      },
+      "nationality": {
+        "type": "select",
+        "validators": ["required"],
+        "dataset": ["PL","GB","DE"],
+        "visibility": "always"
+      },
+      "pesel": {
+        "type": "text",
+        "validators": ["required","len:11"],
+        "visibility": "nationality === PL"
+      }
+    }
+  },
+  {
+    "name": "address",
+    "order": 2,
+    "form": {
+      "city": {
+        "type": "text",
+        "validators": ["required","max-len:20","min-len:3"],
+        "visibility": "always"
+      },
+      "postalCode": {
+        "type": "text",
+        "validators": ["required","max-len:20","min-len:3"],
+        "visibility": "always"
+      },
+      "street": {
+        "type": "text",
+        "validators": ["required","max-len:20","min-len:3"],
+        "visibility": "always"
+      },
+      "houseNumber": {
+        "type": "number",
+        "validators": ["required","min-number:0","min-number:999"],
+        "visibility": "always"
+      },
+      "apartmentNumber": {
+        "type": "number",
+        "validators": ["min-number:0","min-number:999"],
+        "visibility": "always"
+      },
+      "contactConsent": {
+        "type": "checkbox",
+        "validators": ["required"],
+        "visibility": "always"
+      },
+      "preferredContactForm": {
+        "type": "radio-group",
+        "validators": ["required"],
+        "dataset": ["phone","mail","post"],
+        "visibility": "contactConsent === true"
+      },
+      "homeDevices": {
+        "type": "checkbox-group",
+        "validators": ["required"],
+        "dataset": ["phone","tv","tablet"],
+        "visibility": "always"
+      }
+    }
+  }
+]
